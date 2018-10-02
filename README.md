@@ -1,4 +1,18 @@
 
+# Accessing Data within Pandas - Lab
+
+## Introduction
+
+In this lab we're going to get some practice with accessing data from our Pandas Series and DaatFrames.
+
+## Objectives
+You will be able to:
+* Understand and explain some key Pandas methods
+* Use simple selectors for series
+* Access DataFrame data by using the label
+* Perform boolean indexing on both Series and DataFrames
+* Set new Series and DataFrame inputs
+
 # World Cup Matches
 
 ### Load the WorldCupMatches.csv file as a pandas dataframe.
@@ -55,3 +69,7 @@ df[(condition1) & (condition2)] #Returns rows where both conditions are true
 ```python
 # Your code here
 ```
+
+## Summary
+
+Congratulations! You've got some experience accessing data within Pandas Series and DataFrames! Next we'll be moving on to learn about how to perform statistical analysis on data within Pandas.

@@ -1,7 +1,18 @@
 
-# World Cup Matches
+
+# Accessing Data within Pandas - Lab
+
+## Introduction
 
 In this lab, we'll look at a data set which contains information World cup matches. Let's use the pandas commands learned in the previous lecture to learn more about our data!
+
+## Objectives
+You will be able to:
+* Understand and explain some key Pandas methods
+* Access DataFrame data by using the label
+* Perform boolean indexing on both Series and DataFrames
+* Use simple selectors for series
+* Set new Series and DataFrame inputs
 
 ## Load the data
 

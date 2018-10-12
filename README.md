@@ -36,7 +36,7 @@ When looking at the dataframe's `.head()`, you might have noticed that the games
 
 Use the right selection method to print all the information from the 3rd to the 5th game.
 
-Now, print all the info from game 5-8, but we're only interested to print out the "Home Team Name" and the "Away Team Name", 
+Now, print all the info from game 5-9, but we're only interested to print out the "Home Team Name" and the "Away Team Name", 
 
 Next, we'd like the information on all the games played in Group 3 for the 1950 World Cup.
 

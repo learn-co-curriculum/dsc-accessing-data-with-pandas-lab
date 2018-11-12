@@ -746,7 +746,7 @@ df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3")]
 
 
 
-Let's repeat the command above, but now we only want to print out the attendance colum for the Group 3 games
+Let's repeat the command above, but now we only want to print out the attendance column for the Group 3 games
 
 You can combine conditions like this:
 
@@ -780,7 +780,7 @@ print(len(Neth_home))
     32
 
 
-How many games were playes by the Netherlands in total?
+How many games were played by the Netherlands in total?
 
 
 ```python

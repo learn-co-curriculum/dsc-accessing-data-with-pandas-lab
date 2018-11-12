@@ -40,7 +40,7 @@ Now, print all the info from game 5-9, but we're only interested to print out th
 
 Next, we'd like the information on all the games played in Group 3 for the 1950 World Cup.
 
-Let's repeat the command above, but now we only want to print out the attendance colum for the Group 3 games
+Let's repeat the command above, but now we only want to print out the attendance column for the Group 3 games
 
 You can combine conditions like this:
 
@@ -50,7 +50,7 @@ You can combine conditions like this:
 
 Throughout the entire history of the world cup, How many Home games were played by the Netherlands?
 
-How many games were playes by the Netherlands in total?
+How many games were played by the Netherlands in total?
 
 Next, let's try and figure out how many games the USA played in the 2014 world cup. 
 

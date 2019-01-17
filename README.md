@@ -1,5 +1,4 @@
 
-
 # Accessing Data within Pandas - Lab
 
 ## Introduction

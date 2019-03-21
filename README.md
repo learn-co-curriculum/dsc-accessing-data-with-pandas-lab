@@ -75,3 +75,7 @@ df.loc[df["Home Team Name"].str.contains('Korea'), "Home Team Name" ]
 Imagine that for some reason, we simply want Korea listed as one entry, so we want to replace every "Home Team Name" and "Away Team Name" entry that contains "Korea" to simply "Korea". In the same way, we want to change the columns "Home Team Initials" and "Away Team Initials" to NSK (North & South Korea) instead of "KOR" and "PRK". 
 
 Make sure to verify your answer!
+
+## Summary
+
+In this lab, you learned how to access data within Pandas!

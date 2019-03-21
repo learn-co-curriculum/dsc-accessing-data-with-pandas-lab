@@ -1928,3 +1928,7 @@ df.loc[df["Away Team Name"].str.contains('Korea')]
 </div>
 
 
+
+## Summary
+
+In this lab, you learned how to access data within Pandas!

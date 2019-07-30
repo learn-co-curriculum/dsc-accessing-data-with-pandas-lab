@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, we'll look at a data set which contains information World cup matches. Let's use the pandas commands learned in the previous lecture to learn more about our data!
+In this lab, we'll look at a data set which contains information about World Cup matches. Let's use the pandas commands learned in the previous lecture to learn more about our data!
 
 ## Objectives
 You will be able to:
@@ -566,7 +566,7 @@ df.iloc[3:6]
 
 
 
-Now, print all the info from game 5-8, but we're only interested to print out the "Home Team Name" and the "Away Team Name", 
+Now, print all the info from games 5-8, but we're only interested to print out the "Home Team Name" and the "Away Team Name", 
 
 
 ```python
@@ -836,7 +836,7 @@ print(len(set(home)))
     24
 
 
-In the world cup history, how matches had more than 5 goals in total?
+In the world cup history, how many matches had 5 or more goals in total?
 
 
 ```python

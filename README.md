@@ -19,11 +19,6 @@ Load the file `WorldCupMatches.csv` as a dataframe in Pandas
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 import pandas as pd
 df = pd.read_csv('WorldCupMatches.csv')
@@ -32,11 +27,6 @@ df = pd.read_csv('WorldCupMatches.csv')
 ## Common methods and attributes
 
 Use the correct method to look at the first 7 rows of the data set.
-
-
-```python
-
-```
 
 
 ```python
@@ -259,11 +249,6 @@ Look at the last 3 rows of the data set.
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 df.tail(3)
 ```
@@ -391,11 +376,6 @@ Get a concise summary of your data using `.info()`
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 df.info()
 ```
@@ -431,11 +411,6 @@ Obtain a tuple representing the number of rows and number of columns
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 df.shape
 ```
@@ -448,11 +423,6 @@ df.shape
 
 
 Use the appropriate attribute to get the column names
-
-
-```python
-
-```
 
 
 ```python
@@ -477,11 +447,6 @@ df.columns
 When looking at the dataframe's `.head()`, you might have noticed that the games are structured chronologically in the dataframe.
 
 Use the right selection method to print all the information from the 3rd to the 5th game.
-
-
-```python
-
-```
 
 
 ```python
@@ -612,11 +577,6 @@ Now, print all the info from game 5-9, but we're only interested to print out th
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 df.loc[5:9,["Home Team Name", "Away Team Name"]]
 ```
@@ -679,11 +639,6 @@ df.loc[5:9,["Home Team Name", "Away Team Name"]]
 
 
 Next, we'd like the information on all the games played in Group 3 for the 1950 World Cup.
-
-
-```python
-
-```
 
 
 ```python
@@ -820,11 +775,6 @@ You can combine conditions like this:
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3"), "Attendance"]
 ```
@@ -843,11 +793,6 @@ Throughout the entire history of the world cup, How many Home games were played 
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 Neth_home = df[df['Home Team Name']==('Netherlands')]
 print(len(Neth_home))
@@ -860,11 +805,6 @@ How many games were played by the Netherlands in total?
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 Neth_away = df[df['Away Team Name']==('Netherlands')]
 print(len(Neth_home)+len(Neth_away))
@@ -874,11 +814,6 @@ print(len(Neth_home)+len(Neth_away))
 
 
 Next, let's try and figure out how many games the USA played in the 2014 world cup. 
-
-
-```python
-
-```
 
 
 ```python
@@ -897,11 +832,6 @@ Now, let's try to find out how many countries participated in the 1986 world cup
 Hint 1: as a first step, create a new data set that only contain games in that year.
 
 Hint 2: You can use `.unique()` to make sure you don't end up with duplicate country names.
-
-
-```python
-
-```
 
 
 ```python
@@ -924,11 +854,6 @@ In the world cup history, how matches had more than 5 goals in total?
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 df['Total_Goals'] = df['Home Team Goals'] + df['Away Team Goals']
 print(len(df[df.Total_Goals>=5]))
@@ -940,11 +865,6 @@ print(len(df[df.Total_Goals>=5]))
 ## Changing values and creating new columns
 
 With the information you currently have in your `df`, create a new column "Half-time Goals".
-
-
-```python
-
-```
 
 
 ```python
@@ -993,11 +913,6 @@ Imagine that for some reason, we simply want Korea listed as one entry, so we wa
 
 
 ```python
-
-```
-
-
-```python
 # __SOLUTION__ 
 df.loc[df["Home Team Name"] == "Korea DPR", "Home Team Name"] = "Korea"
 df.loc[df["Home Team Name"] == "Korea Republic", "Home Team Name"] = "Korea"
@@ -1010,11 +925,6 @@ df.loc[df["Away Team Initials"] == "PRK", "Away Team Initials"] = "NSK"
 ```
 
 Make sure to verify your answer!
-
-
-```python
-
-```
 
 
 ```python
@@ -1481,10 +1391,6 @@ df.loc[df["Home Team Name"].str.contains('Korea')]
 </div>
 
 
-
-## Summary
-
-In this lab, you learned how to access data within Pandas!
 
 
 ```python
@@ -2047,3 +1953,7 @@ df.loc[df["Away Team Name"].str.contains('Korea')]
 </div>
 
 
+
+## Summary
+
+In this lab, you learned how to access data within Pandas!

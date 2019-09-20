@@ -3,19 +3,26 @@
 
 ## Introduction
 
-In this lab, we'll look at a data set which contains information World cup matches. Let's use the pandas commands learned in the previous lecture to learn more about our data!
+In this lab, we'll look at a dataset which contains information World cup matches. Let's use the Pandas commands learned in the previous lesson to learn more about our data!
 
 ## Objectives
 You will be able to:
-* Understand and explain some key Pandas methods
-* Access DataFrame data by using the label
-* Perform boolean indexing on both Series and DataFrames
-* Use simple selectors for series
-* Set new Series and DataFrame inputs
+* Use some key Pandas methods
+* Access DataFrame data by using `iloc` and `loc` 
+* Filter rows of a DataFrame based on given conditions
+* Create new columns in a DataFrame
 
 ## Load the data
 
-Load the file `WorldCupMatches.csv` as a dataframe in Pandas
+Load the file `'WorldCupMatches.csv'` as a DataFrame in Pandas.
+
+
+```python
+# Import pandas using the standard alias
+
+# Import 'WorldCupMatches.csv' as a DataFrame
+df = None
+```
 
 
 ```python
@@ -26,7 +33,13 @@ df = pd.read_csv('WorldCupMatches.csv')
 
 ## Common methods and attributes
 
-Use the correct method to look at the first 7 rows of the data set.
+Use the correct method to look at the first 7 rows of the dataset.
+
+
+```python
+# Print the first 7 rows of df
+
+```
 
 
 ```python
@@ -249,6 +262,12 @@ Look at the last 3 rows of the data set.
 
 
 ```python
+# Print the last 3 rows of df
+
+```
+
+
+```python
 # __SOLUTION__ 
 df.tail(3)
 ```
@@ -372,7 +391,13 @@ df.tail(3)
 
 
 
-Get a concise summary of your data using `.info()`
+Get a concise summary of the data using `.info()`. 
+
+
+```python
+# Print a concise summary of df
+
+```
 
 
 ```python
@@ -411,6 +436,12 @@ Obtain a tuple representing the number of rows and number of columns
 
 
 ```python
+# Print the number of rows and columns in df
+
+```
+
+
+```python
 # __SOLUTION__ 
 df.shape
 ```
@@ -423,6 +454,12 @@ df.shape
 
 
 Use the appropriate attribute to get the column names
+
+
+```python
+# Print the column names of df
+
+```
 
 
 ```python
@@ -442,11 +479,17 @@ df.columns
 
 
 
-## Selecting dataframe information
+## Selecting DataFrame information
 
-When looking at the dataframe's `.head()`, you might have noticed that the games are structured chronologically in the dataframe.
+When looking at the DataFrame's `.head()`, you might have noticed that the games are structured chronologically in the DataFrame.
 
 Use the right selection method to print all the information from the 3rd to the 5th game.
+
+
+```python
+# Print rows 3 through 5
+
+```
 
 
 ```python
@@ -577,6 +620,12 @@ Now, print all the info from game 5-9, but we're only interested to print out th
 
 
 ```python
+# Print rows 5 through 9 and columns "Home Team Name" and "Away Team Name"
+
+```
+
+
+```python
 # __SOLUTION__ 
 df.loc[5:9,["Home Team Name", "Away Team Name"]]
 ```
@@ -642,8 +691,14 @@ Next, we'd like the information on all the games played in Group 3 for the 1950 
 
 
 ```python
+# Print all info for games played in 1950 for Group 3
+
+```
+
+
+```python
 # __SOLUTION__ 
-df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3")]
+df.loc[(df["Year"] == 1950) & (df["Stage"] == "Group 3")]
 ```
 
 
@@ -765,7 +820,7 @@ df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3")]
 
 
 
-Let's repeat the command above, but now we only want to print out the attendance column for the Group 3 games
+Let's repeat the command above, but now we only want to print out the attendance column for the Group 3 games. 
 
 You can combine conditions like this:
 
@@ -775,8 +830,14 @@ You can combine conditions like this:
 
 
 ```python
+# Print the "Attendance" column for games played in 1950 for Group 3
+
+```
+
+
+```python
 # __SOLUTION__ 
-df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3"), "Attendance"]
+df.loc[(df["Year"] == 1950) & (df["Stage"] == "Group 3"), "Attendance"]
 ```
 
 
@@ -789,12 +850,18 @@ df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3"), "Attendance"]
 
 
 
-Throughout the entire history of the world cup, How many Home games were played by the Netherlands?
+Throughout the entire history of the world cup, how many home games were played by the Netherlands?
+
+
+```python
+# Number of home games played by the Netherlands
+
+```
 
 
 ```python
 # __SOLUTION__ 
-Neth_home = df[df['Home Team Name']==('Netherlands')]
+Neth_home = df[df['Home Team Name'] == ('Netherlands')]
 print(len(Neth_home))
 ```
 
@@ -802,6 +869,12 @@ print(len(Neth_home))
 
 
 How many games were played by the Netherlands in total?
+
+
+```python
+# Number of games played by the Netherlands in total
+
+```
 
 
 ```python
@@ -817,6 +890,12 @@ Next, let's try and figure out how many games the USA played in the 2014 world c
 
 
 ```python
+# Number of games the USA played in the 2014 world cup
+
+```
+
+
+```python
 # __SOLUTION__ 
 USA_home_and_away = df[(df.Year==2014)
          & ((df['Home Team Name'] == 'USA') | (df['Away Team Name']=='USA'))
@@ -829,9 +908,15 @@ print(len(USA_home_and_away))
 
 Now, let's try to find out how many countries participated in the 1986 world cup.
 
-Hint 1: as a first step, create a new data set that only contain games in that year.
+Hint 1: as a first step, create a new dataset that only contain games in that year.
 
 Hint 2: You can use `.unique()` to make sure you don't end up with duplicate country names.
+
+
+```python
+# Number of countries participated in the 1986 world cup
+
+```
 
 
 ```python
@@ -854,6 +939,12 @@ In the world cup history, how matches had more than 5 goals in total?
 
 
 ```python
+# Number of matches that had more than 5 goals in total
+
+```
+
+
+```python
 # __SOLUTION__ 
 df['Total_Goals'] = df['Home Team Goals'] + df['Away Team Goals']
 print(len(df[df.Total_Goals>=5]))
@@ -865,6 +956,12 @@ print(len(df[df.Total_Goals>=5]))
 ## Changing values and creating new columns
 
 With the information you currently have in your `df`, create a new column "Half-time Goals".
+
+
+```python
+# Create a new column "Half-time Goals" in df
+
+```
 
 
 ```python
@@ -913,6 +1010,11 @@ Imagine that for some reason, we simply want Korea listed as one entry, so we wa
 
 
 ```python
+
+```
+
+
+```python
 # __SOLUTION__ 
 df.loc[df["Home Team Name"] == "Korea DPR", "Home Team Name"] = "Korea"
 df.loc[df["Home Team Name"] == "Korea Republic", "Home Team Name"] = "Korea"
@@ -925,6 +1027,11 @@ df.loc[df["Away Team Initials"] == "PRK", "Away Team Initials"] = "NSK"
 ```
 
 Make sure to verify your answer!
+
+
+```python
+
+```
 
 
 ```python

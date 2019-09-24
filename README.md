@@ -3,19 +3,18 @@
 
 ## Introduction
 
-In this lab, we'll look at a data set which contains information World cup matches. Let's use the pandas commands learned in the previous lecture to learn more about our data!
+In this lab, we'll look at a dataset which contains information World cup matches. Let's use the Pandas commands learned in the previous lesson to learn more about our data!
 
 ## Objectives
 You will be able to:
-* Understand and explain some key Pandas methods
-* Access DataFrame data by using the label
-* Perform boolean indexing on both Series and DataFrames
-* Use simple selectors for series
-* Set new Series and DataFrame inputs
+* Use some key Pandas methods
+* Access DataFrame data by using `iloc` and `loc` 
+* Filter rows of a DataFrame based on given conditions
+* Create new columns in a DataFrame
 
 ## Load the data
 
-Load the file `WorldCupMatches.csv` as a dataframe in Pandas
+Load the file `'WorldCupMatches.csv'` as a DataFrame in Pandas.
 
 
 ```python
@@ -25,7 +24,7 @@ df = pd.read_csv('WorldCupMatches.csv')
 
 ## Common methods and attributes
 
-Use the correct method to look at the first 7 rows of the data set.
+Use the correct method to look at the first 7 rows of the dataset.
 
 
 ```python
@@ -369,7 +368,7 @@ df.tail(3)
 
 
 
-Get a concise summary of your data using `.info()`
+Get a concise summary of the data using `.info()`. 
 
 
 ```python
@@ -436,9 +435,9 @@ df.columns
 
 
 
-## Selecting dataframe information
+## Selecting DataFrame information
 
-When looking at the dataframe's `.head()`, you might have noticed that the games are structured chronologically in the dataframe.
+When looking at the DataFrame's `.head()`, you might have noticed that the games are structured chronologically in the DataFrame.
 
 Use the right selection method to print all the information from the 3rd to the 5th game.
 
@@ -634,7 +633,7 @@ Next, we'd like the information on all the games played in Group 3 for the 1950 
 
 
 ```python
-df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3")]
+df.loc[(df["Year"] == 1950) & (df["Stage"] == "Group 3")]
 ```
 
 
@@ -756,7 +755,7 @@ df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3")]
 
 
 
-Let's repeat the command above, but now we only want to print out the attendance column for the Group 3 games
+Let's repeat the command above, but now we only want to print out the attendance column for the Group 3 games. 
 
 You can combine conditions like this:
 
@@ -766,7 +765,7 @@ You can combine conditions like this:
 
 
 ```python
-df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3"), "Attendance"]
+df.loc[(df["Year"] == 1950) & (df["Stage"] == "Group 3"), "Attendance"]
 ```
 
 
@@ -779,11 +778,11 @@ df.loc[(df["Year"] == 1950) & (df["Stage"]=="Group 3"), "Attendance"]
 
 
 
-Throughout the entire history of the world cup, How many Home games were played by the Netherlands?
+Throughout the entire history of the world cup, how many home games were played by the Netherlands?
 
 
 ```python
-Neth_home = df[df['Home Team Name']==('Netherlands')]
+Neth_home = df[df['Home Team Name'] == ('Netherlands')]
 print(len(Neth_home))
 ```
 
@@ -816,7 +815,7 @@ print(len(USA_home_and_away))
 
 Now, let's try to find out how many countries participated in the 1986 world cup.
 
-Hint 1: as a first step, create a new data set that only contain games in that year.
+Hint 1: as a first step, create a new dataset that only contain games in that year.
 
 Hint 2: You can use `.unique()` to make sure you don't end up with duplicate country names.
 

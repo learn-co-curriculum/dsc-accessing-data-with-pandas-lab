@@ -3,14 +3,14 @@
 
 ## Introduction
 
-In this lab, we'll look at a dataset which contains information World cup matches. Let's use the Pandas commands learned in the previous lesson to learn more about our data!
+In this lab, we'll look at a dataset which contains information on World Cup matches. Let's use the Pandas commands learned in the previous lesson to learn more about our data!
 
 ## Objectives
 You will be able to:
-* Use some key Pandas methods
-* Access DataFrame data by using `iloc` and `loc` 
-* Filter rows of a DataFrame based on given conditions
-* Create new columns in a DataFrame
+- Use some key Pandas methods
+- Access DataFrame data by using `iloc` and `loc` 
+- Filter rows of a DataFrame based on given conditions
+- Create new columns in a DataFrame
 
 ## Load the data
 
@@ -78,7 +78,7 @@ Use the right selection method to print all the information from the 3rd to the 
 
 ```
 
-Now, print all the info from game 5-9, but we're only interested to print out the "Home Team Name" and the "Away Team Name", 
+Now, print all the info from game 5-9, but we're only interested in printing out the, "Home Team Name" and the, "Away Team Name." 
 
 
 ```python
@@ -108,7 +108,7 @@ You can combine conditions like this:
 
 ```
 
-Throughout the entire history of the world cup, how many home games were played by the Netherlands?
+Throughout the entire history of the World Cup, how many home games were played by the Netherlands?
 
 
 ```python
@@ -124,7 +124,7 @@ How many games were played by the Netherlands in total?
 
 ```
 
-Next, let's try and figure out how many games the USA played in the 2014 world cup. 
+Next, let's try and figure out how many games the USA played in the 2014 World Cup. 
 
 
 ```python
@@ -132,9 +132,9 @@ Next, let's try and figure out how many games the USA played in the 2014 world c
 
 ```
 
-Now, let's try to find out how many countries participated in the 1986 world cup.
+Now, let's try to find out how many countries participated in the 1986 World Cup.
 
-Hint 1: as a first step, create a new dataset that only contain games in that year.
+Hint 1: as a first step, create a new dataset that only contains games in that year.
 
 Hint 2: You can use `.unique()` to make sure you don't end up with duplicate country names.
 
@@ -144,7 +144,7 @@ Hint 2: You can use `.unique()` to make sure you don't end up with duplicate cou
 
 ```
 
-In the world cup history, how matches had more than 5 goals in total?
+In World Cup history, how matches had more than 5 goals in total?
 
 
 ```python
@@ -154,7 +154,7 @@ In the world cup history, how matches had more than 5 goals in total?
 
 ## Changing values and creating new columns
 
-With the information you currently have in your `df`, create a new column "Half-time Goals".
+With the information you currently have in your `df`, create a new column, "Half-time Goals."
 
 
 ```python
@@ -169,7 +169,7 @@ Run the code below. You'll notice that for Korea, there are records for both Nor
 df.loc[df["Home Team Name"].str.contains('Korea'), "Home Team Name" ]
 ```
 
-Imagine that for some reason, we simply want Korea listed as one entry, so we want to replace every "Home Team Name" and "Away Team Name" entry that contains "Korea" to simply "Korea". In the same way, we want to change the columns "Home Team Initials" and "Away Team Initials" to NSK (North & South Korea) instead of "KOR" and "PRK". 
+Imagine that, for some reason, we simply want Korea listed as one entry, so we want to replace every "Home Team Name" and "Away Team Name" entry that contains "Korea" to simply "Korea". In the same way, we want to change the columns "Home Team Initials" and "Away Team Initials" to NSK (North & South Korea) instead of "KOR" and "PRK". 
 
 
 ```python

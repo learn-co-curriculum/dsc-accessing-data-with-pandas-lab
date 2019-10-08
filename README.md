@@ -7,10 +7,10 @@ In this lab, we'll look at a dataset which contains information on World Cup mat
 
 ## Objectives
 You will be able to:
-- Use some key Pandas methods
-- Access DataFrame data by using `iloc` and `loc` 
-- Filter rows of a DataFrame based on given conditions
-- Create new columns in a DataFrame
+* Use some key Pandas methods
+* Access DataFrame data by using `iloc` and `loc` 
+* Filter rows of a DataFrame based on given conditions
+* Create new columns in a DataFrame
 
 ## Load the data
 

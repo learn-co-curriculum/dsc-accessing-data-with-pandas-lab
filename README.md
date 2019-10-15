@@ -6,11 +6,10 @@
 In this lab, we'll look at a dataset which contains information on World Cup matches. Let's use the Pandas commands learned in the previous lesson to learn more about our data!
 
 ## Objectives
-You will be able to:
-* Use some key Pandas methods
-* Access DataFrame data by using `iloc` and `loc` 
-* Filter rows of a DataFrame based on given conditions
-* Create new columns in a DataFrame
+You will be able to: 
+- Use pandas methods and attributes to access information about a dataset 
+- Index pandas dataframes with .loc, .iloc, and column names 
+- Use a boolean mask to index pandas series and dataframes
 
 ## Load the data
 
@@ -19,6 +18,7 @@ Load the file `'WorldCupMatches.csv'` as a DataFrame in Pandas.
 
 ```python
 # Import pandas using the standard alias
+
 
 # Import 'WorldCupMatches.csv' as a DataFrame
 df = None
@@ -82,7 +82,7 @@ Now, print all the info from game 5-9, but we're only interested in printing out
 
 
 ```python
-# Print rows 5 through 9 and columns "Home Team Name" and "Away Team Name"
+# Print rows 5 through 9 and columns 'Home Team Name' and 'Away Team Name'
 
 ```
 
@@ -104,7 +104,7 @@ You can combine conditions like this:
 
 
 ```python
-# Print the "Attendance" column for games played in 1950 for Group 3
+# Print the 'Attendance' column for games played in 1950 for Group 3
 
 ```
 
@@ -158,7 +158,7 @@ With the information you currently have in your `df`, create a new column, "Half
 
 
 ```python
-# Create a new column "Half-time Goals" in df
+# Create a new column 'Half-time Goals' in df
 
 ```
 
@@ -166,13 +166,15 @@ Run the code below. You'll notice that for Korea, there are records for both Nor
 
 
 ```python
-df.loc[df["Home Team Name"].str.contains('Korea'), "Home Team Name" ]
+# Print all records containing the string 'Korea'
+df.loc[df['Home Team Name'].str.contains('Korea'), 'Home Team Name']
 ```
 
 Imagine that, for some reason, we simply want Korea listed as one entry, so we want to replace every "Home Team Name" and "Away Team Name" entry that contains "Korea" to simply "Korea". In the same way, we want to change the columns "Home Team Initials" and "Away Team Initials" to NSK (North & South Korea) instead of "KOR" and "PRK". 
 
 
 ```python
+# Update the 'Home Team Name' and 'Home Team Initials' columns 
 
 ```
 
@@ -180,6 +182,7 @@ Make sure to verify your answer!
 
 
 ```python
+# Check the updated columns
 
 ```
 

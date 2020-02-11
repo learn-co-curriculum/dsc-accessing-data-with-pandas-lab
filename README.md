@@ -850,7 +850,7 @@ print(len(set(home)))
     24
 
 
-In World Cup history, how matches had more than 5 goals in total?
+In World Cup history, how many matches had 5 goals or more in total?
 
 
 ```python

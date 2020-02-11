@@ -144,11 +144,11 @@ Hint 2: You can use `.unique()` to make sure you don't end up with duplicate cou
 
 ```
 
-In World Cup history, how matches had more than 5 goals in total?
+In World Cup history, how many matches had 5 goals or more in total?
 
 
 ```python
-# Number of matches that had more than 5 goals in total
+# Number of matches that had 5 or more goals in total
 
 ```
 

@@ -914,8 +914,8 @@ df.loc[df['Home Team Name'] == 'Korea Republic', 'Home Team Name'] = 'Korea'
 df.loc[df['Away Team Name'] == 'Korea DPR', 'Away Team Name'] = 'Korea'
 df.loc[df['Away Team Name'] == 'Korea Republic', 'Away Team Name'] = 'Korea'
 df.loc[df['Home Team Initials'] == 'KOR', 'Home Team Initials'] = 'NSK'
-df.loc[df['Home Team Initials'] == 'KOR', 'Home Team Initials'] = 'NSK'
-df.loc[df['Away Team Initials'] == 'PRK', 'Away Team Initials'] = 'NSK'
+df.loc[df['Home Team Initials'] == 'PRK', 'Home Team Initials'] = 'NSK'
+df.loc[df['Away Team Initials'] == 'KOR', 'Away Team Initials'] = 'NSK'
 df.loc[df['Away Team Initials'] == 'PRK', 'Away Team Initials'] = 'NSK'
 ```
 

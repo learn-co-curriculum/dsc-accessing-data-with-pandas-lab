@@ -1,9 +1,8 @@
-
 # Accessing Data within Pandas - Lab
 
 ## Introduction
 
-In this lab, we'll look at a dataset which contains information on World Cup matches. Let's use the Pandas commands learned in the previous lesson to learn more about our data!
+In this lab, we'll look at a dataset which contains information on World Cup matches. Let's use the pandas commands learned in the previous lesson to learn more about our data!
 
 ## Objectives
 You will be able to: 
@@ -11,92 +10,79 @@ You will be able to:
 - Index pandas dataframes with .loc, .iloc, and column names 
 - Use a boolean mask to index pandas series and dataframes
 
-## Load the data
+## Load the Data
 
-Load the file `'WorldCupMatches.csv'` as a DataFrame in Pandas.
+Load the file `'WorldCupMatches.csv'` as a DataFrame in pandas.
 
 
 ```python
+# Replace None with appropriate code
+
 # Import pandas using the standard alias
+None
 
-
-# Import 'WorldCupMatches.csv' as a DataFrame
+# Load 'WorldCupMatches.csv' as a DataFrame
 df = None
 ```
 
-## Common methods and attributes
+## Common Methods and Attributes
 
-Use the correct method to look at the first 7 rows of the dataset.
+Use the correct method to display the **first 7 rows** of the dataset.
 
 
 ```python
-# Print the first 7 rows of df
-
+# Your code here
 ```
 
-Look at the last 3 rows of the data set.
+Display the **last 3 rows** of the dataset.
 
 
 ```python
-# Print the last 3 rows of df
-
+# Your code here
 ```
 
 Get a concise summary of the data using `.info()`. 
 
 
 ```python
-# Print a concise summary of df
-
+# Your code here
 ```
 
-Obtain a tuple representing the number of rows and number of columns
+Obtain a tuple representing the **number of rows and number of columns**.
 
 
 ```python
-# Print the number of rows and columns in df
-
+# Your code here
 ```
 
-Use the appropriate attribute to get the column names
+Use the appropriate attribute to get the **column names**.
 
 
 ```python
-# Print the column names of df
-
+# Your code here
 ```
 
-## Selecting DataFrame information
+## Selecting DataFrame Information
 
-When looking at the DataFrame's `.head()`, you might have noticed that the games are structured chronologically in the DataFrame.
+When looking at the DataFrame's `.head()` and `.tail()`, you might have noticed that the games are structured chronologically in the DataFrame.
 
-Use the right selection method to print all the information from the 3rd to the 5th game.
+Use the right selection method to display all the information from the 3rd to the 5th game (i.e. **select rows 3 through 5 inclusive**).
 
 
 ```python
-# Print rows 3 through 5
-
+# Your code here
 ```
 
-Now, print all the info from game 5-9, but we're only interested in printing out the, "Home Team Name" and the, "Away Team Name." 
+Now, display the info from **game 5-9** (inclusive), but **only the `"Home Team Name"` and the `"Away Team Name"` columns**.
 
 
 ```python
-# Print rows 5 through 9 and columns 'Home Team Name' and 'Away Team Name'
-
+# Your code here
 ```
 
-Next, we'd like the information on all the games played in Group 3 for the 1950 World Cup.
+Next, we'd like the information on all the games played in **Group 3** for the **1950** World Cup.
 
-
-```python
-# Print all info for games played in 1950 for Group 3
-
-```
-
-Let's repeat the command above, but now we only want to print out the attendance column for the Group 3 games. 
-
-You can combine conditions like this:
+Hint: You can combine conditions like this:
 
 `df[(condition1) | (condition2)]`  -> Returns rows where either condition is true
 
@@ -104,69 +90,79 @@ You can combine conditions like this:
 
 
 ```python
-# Print the 'Attendance' column for games played in 1950 for Group 3
-
+# Your code here
 ```
 
-Throughout the entire history of the World Cup, how many home games were played by the Netherlands?
+Let's repeat the command above, but this time display **only the attendance column** for the Group 3 games. 
 
 
 ```python
-# Number of home games played by the Netherlands
-
+# Your code here
 ```
 
-How many games were played by the Netherlands in total?
+Throughout the entire history of the World Cup as recorded in this dataset, **how many home games were played by the Netherlands**?
+
+(Remember that you can use the `len()` built-in function to find the number of rows in a DataFrame.)
 
 
 ```python
-# Number of games played by the Netherlands in total
-
+# Your code here
 ```
 
-Next, let's try and figure out how many games the USA played in the 2014 World Cup. 
+**How many games were played by the Netherlands in total**?
 
 
 ```python
-# Number of games the USA played in the 2014 world cup
-
+# Your code here
 ```
 
-Now, let's try to find out how many countries participated in the 1986 World Cup.
-
-Hint 1: as a first step, create a new dataset that only contains games in that year.
-
-Hint 2: You can use `.unique()` to make sure you don't end up with duplicate country names.
+Next, let's try and figure out **how many games the USA played in the 2014 World Cup**.
 
 
 ```python
-# Number of countries participated in the 1986 world cup
-
+# Your code here
 ```
 
-In World Cup history, how many matches had 5 goals or more in total?
+Now, let's try to find out **how many countries participated in the 1986 World Cup**.
+
+Hint 1: As a first step, create a new dataset that only contains games in that year.
+
+Hint 2: Make sure you don't end up with duplicate country names. Consider using `set()` or `.unique()`.
 
 
 ```python
-# Number of matches that had 5 or more goals in total
-
+# Your code here
 ```
 
-## Changing values and creating new columns
+## Changing Values and Creating New Columns
 
-With the information you currently have in your `df`, create a new column, "Half-time Goals."
+In World Cup history, **how many matches had 5 goals or more in total**? Create a column `"Total Goals"` to answer this question.
 
 
 ```python
-# Create a new column 'Half-time Goals' in df
+# Your code here
+```
 
+Now **create a new column `"Half-time Goals"`** in `df` that includes both home and away values.
+
+
+```python
+# Your code here
+```
+
+
+```python
+# Run this cell without changes to see your new column
+df.columns
 ```
 
 Run the code below. You'll notice that for Korea, there are records for both North-Korea (Korea DPR) and South-Korea (Korea Republic). 
 
 
 ```python
-# Print all records containing the string 'Korea'
+# Run this cell without changes
+
+# Diaplay all records containing the string 'Korea'
 df.loc[df['Home Team Name'].str.contains('Korea'), 'Home Team Name']
 ```
 
@@ -188,4 +184,4 @@ Make sure to verify your answer!
 
 ## Summary
 
-In this lab, you learned how to access data within Pandas!
+In this lab, you practiced accessing data within Pandas!

@@ -1,9 +1,8 @@
-
 # Accessing Data within Pandas - Lab
 
 ## Introduction
 
-In this lab, we'll look at a dataset which contains information on World Cup matches. Let's use the Pandas commands learned in the previous lesson to learn more about our data!
+In this lab, we'll look at a dataset which contains information on World Cup matches. Let's use the pandas commands learned in the previous lesson to learn more about our data!
 
 ## Objectives
 You will be able to: 
@@ -11,16 +10,18 @@ You will be able to:
 - Index pandas dataframes with .loc, .iloc, and column names 
 - Use a boolean mask to index pandas series and dataframes
 
-## Load the data
+## Load the Data
 
-Load the file `'WorldCupMatches.csv'` as a DataFrame in Pandas.
+Load the file `'WorldCupMatches.csv'` as a DataFrame in pandas.
 
 
 ```python
+# Replace None with appropriate code
+
 # Import pandas using the standard alias
+None
 
-
-# Import 'WorldCupMatches.csv' as a DataFrame
+# Load 'WorldCupMatches.csv' as a DataFrame
 df = None
 ```
 
@@ -30,24 +31,23 @@ df = None
 # Import pandas using the standard alias
 import pandas as pd
 
-# Import 'WorldCupMatches.csv' as a DataFrame
+# Load 'WorldCupMatches.csv' as a DataFrame
 df = pd.read_csv('WorldCupMatches.csv')
 ```
 
-## Common methods and attributes
+## Common Methods and Attributes
 
-Use the correct method to look at the first 7 rows of the dataset.
+Use the correct method to display the **first 7 rows** of the dataset.
 
 
 ```python
-# Print the first 7 rows of df
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
-# Print the first 7 rows of df
+# Display the first 7 rows of df
 df.head(7)
 ```
 
@@ -262,18 +262,17 @@ df.head(7)
 
 
 
-Look at the last 3 rows of the data set.
+Display the **last 3 rows** of the dataset.
 
 
 ```python
-# Print the last 3 rows of df
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
-# Print the last 3 rows of df
+# Display the last 3 rows of df
 df.tail(3)
 ```
 
@@ -400,8 +399,7 @@ Get a concise summary of the data using `.info()`.
 
 
 ```python
-# Print a concise summary of df
-
+# Your code here
 ```
 
 
@@ -414,42 +412,43 @@ df.info()
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 852 entries, 0 to 851
     Data columns (total 20 columns):
-    Year                    852 non-null int64
-    Datetime                852 non-null object
-    Stage                   852 non-null object
-    Stadium                 852 non-null object
-    City                    852 non-null object
-    Home Team Name          852 non-null object
-    Home Team Goals         852 non-null int64
-    Away Team Goals         852 non-null int64
-    Away Team Name          852 non-null object
-    Win conditions          852 non-null object
-    Attendance              850 non-null float64
-    Half-time Home Goals    852 non-null int64
-    Half-time Away Goals    852 non-null int64
-    Referee                 852 non-null object
-    Assistant 1             852 non-null object
-    Assistant 2             852 non-null object
-    RoundID                 852 non-null int64
-    MatchID                 852 non-null int64
-    Home Team Initials      852 non-null object
-    Away Team Initials      852 non-null object
+     #   Column                Non-Null Count  Dtype  
+    ---  ------                --------------  -----  
+     0   Year                  852 non-null    int64  
+     1   Datetime              852 non-null    object 
+     2   Stage                 852 non-null    object 
+     3   Stadium               852 non-null    object 
+     4   City                  852 non-null    object 
+     5   Home Team Name        852 non-null    object 
+     6   Home Team Goals       852 non-null    int64  
+     7   Away Team Goals       852 non-null    int64  
+     8   Away Team Name        852 non-null    object 
+     9   Win conditions        852 non-null    object 
+     10  Attendance            850 non-null    float64
+     11  Half-time Home Goals  852 non-null    int64  
+     12  Half-time Away Goals  852 non-null    int64  
+     13  Referee               852 non-null    object 
+     14  Assistant 1           852 non-null    object 
+     15  Assistant 2           852 non-null    object 
+     16  RoundID               852 non-null    int64  
+     17  MatchID               852 non-null    int64  
+     18  Home Team Initials    852 non-null    object 
+     19  Away Team Initials    852 non-null    object 
     dtypes: float64(1), int64(7), object(12)
     memory usage: 133.2+ KB
 
 
-Obtain a tuple representing the number of rows and number of columns
+Obtain a tuple representing the **number of rows and number of columns**.
 
 
 ```python
-# Print the number of rows and columns in df
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
-# Print the number of rows and columns in df
+# Display the number of rows and columns in df
 df.shape
 ```
 
@@ -460,18 +459,17 @@ df.shape
 
 
 
-Use the appropriate attribute to get the column names
+Use the appropriate attribute to get the **column names**.
 
 
 ```python
-# Print the column names of df
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
-# Print the column names of df
+# Display the column names of df
 df.columns
 ```
 
@@ -487,22 +485,22 @@ df.columns
 
 
 
-## Selecting DataFrame information
+## Selecting DataFrame Information
 
-When looking at the DataFrame's `.head()`, you might have noticed that the games are structured chronologically in the DataFrame.
+When looking at the DataFrame's `.head()` and `.tail()`, you might have noticed that the games are structured chronologically in the DataFrame.
 
-Use the right selection method to print all the information from the 3rd to the 5th game.
+Use the right selection method to display all the information from the 3rd to the 5th game (i.e. **select rows 3 through 5 inclusive**).
 
 
 ```python
-# Print rows 3 through 5
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
-# Print rows 3 through 5
+# Display rows 3 through 5
+# .iloc interval is "half open", does not include 6 in the output
 df.iloc[3:6]
 ```
 
@@ -625,19 +623,19 @@ df.iloc[3:6]
 
 
 
-Now, print all the info from game 5-9, but we're only interested in printing out the, "Home Team Name" and the, "Away Team Name." 
+Now, display the info from **game 5-9** (inclusive), but **only the `"Home Team Name"` and the `"Away Team Name"` columns**.
 
 
 ```python
-# Print rows 5 through 9 and columns 'Home Team Name' and 'Away Team Name'
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
-# Print rows 5 through 9 and columns 'Home Team Name' and 'Away Team Name'
-df.loc[5:9,['Home Team Name', 'Away Team Name']]
+# Display rows 5 through 9 and columns 'Home Team Name' and 'Away Team Name'
+# .loc interval is not "half open", it includes the endpoint
+df.loc[5:9, ['Home Team Name', 'Away Team Name']]
 ```
 
 
@@ -697,19 +695,27 @@ df.loc[5:9,['Home Team Name', 'Away Team Name']]
 
 
 
-Next, we'd like the information on all the games played in Group 3 for the 1950 World Cup.
+Next, we'd like the information on all the games played in **Group 3** for the **1950** World Cup.
+
+Hint: You can combine conditions like this:
+
+`df[(condition1) | (condition2)]`  -> Returns rows where either condition is true
+
+`df[(condition1) & (condition2)]`  -> Returns rows where both conditions are true
 
 
 ```python
-# Print all info for games played in 1950 for Group 3
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
-# Print all info for games played in 1950 for Group 3
-df.loc[(df["Year"] == 1950) & (df["Stage"] == "Group 3")]
+# Display all info for games played in 1950 for Group 3
+# This time we don't need .loc because we are applying a
+# boolean mask and our indexing uses rows only (all
+# columns are selected)
+df[(df["Year"] == 1950) & (df["Stage"] == "Group 3")]
 ```
 
 
@@ -831,24 +837,21 @@ df.loc[(df["Year"] == 1950) & (df["Stage"] == "Group 3")]
 
 
 
-Let's repeat the command above, but now we only want to print out the attendance column for the Group 3 games. 
-
-You can combine conditions like this:
-
-`df[(condition1) | (condition2)]`  -> Returns rows where either condition is true
-
-`df[(condition1) & (condition2)]`  -> Returns rows where both conditions are true
+Let's repeat the command above, but this time display **only the attendance column** for the Group 3 games. 
 
 
 ```python
-# Print the 'Attendance' column for games played in 1950 for Group 3
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
-# Print the 'Attendance' column for games played in 1950 for Group 3
+# Print the 'Attendance' column for games played in 1950
+# for Group 3
+# This time we want to use df.loc instead of just
+# df[boolean mask] in order to select certain rows AND
+# certain columns
 df.loc[(df['Year'] == 1950) & (df['Stage'] == 'Group 3'), 'Attendance']
 ```
 
@@ -862,122 +865,173 @@ df.loc[(df['Year'] == 1950) & (df['Stage'] == 'Group 3'), 'Attendance']
 
 
 
-Throughout the entire history of the World Cup, how many home games were played by the Netherlands?
+Throughout the entire history of the World Cup as recorded in this dataset, **how many home games were played by the Netherlands**?
+
+(Remember that you can use the `len()` built-in function to find the number of rows in a DataFrame.)
 
 
 ```python
-# Number of home games played by the Netherlands
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
 # Number of home games played by the Netherlands
-Neth_home = df[df['Home Team Name'] == ('Netherlands')]
-print(len(Neth_home))
+# Here we are just using df[boolean mask] again
+neth_home = len(df[df['Home Team Name'] == ('Netherlands')])
+neth_home
 ```
+
+
+
 
     32
 
 
-How many games were played by the Netherlands in total?
+
+**How many games were played by the Netherlands in total**?
 
 
 ```python
-# Number of games played by the Netherlands in total
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
 # Number of games played by the Netherlands in total
-Neth_away = df[df['Away Team Name']==('Netherlands')]
-print(len(Neth_home)+len(Neth_away))
+# Conveniently we already saved neth_home as a variable
+# so we just need to find the number of times they were
+# the away team and sum them
+len(df[df['Away Team Name']==('Netherlands')]) + neth_home
 ```
+
+
+
 
     54
 
 
-Next, let's try and figure out how many games the USA played in the 2014 World Cup. 
+
+Next, let's try and figure out **how many games the USA played in the 2014 World Cup**.
 
 
 ```python
-# Number of games the USA played in the 2014 world cup
-
+# Your code here
 ```
 
 
 ```python
-# __SOLUTION__ 
+# __SOLUTION__
+
 # Number of games the USA played in the 2014 world cup
-USA_home_and_away = df[(df['Year'] == 2014) &
-                       ((df['Home Team Name'] == 'USA') |
-                        (df['Away Team Name'] == 'USA'))]
-print(len(USA_home_and_away))
+
+# Mask will return True or False for each row of df
+usa_2014_mask = (
+    # USA is home team OR away team
+    (
+        (df['Home Team Name'] == 'USA') |
+        (df['Away Team Name'] == 'USA')
+    ) &
+    # AND year is 2014
+    (df['Year'] == 2014)
+)
+
+# Filter df using mask and find its length
+len(df[usa_2014_mask])
 ```
+
+
+
 
     5
 
 
-Now, let's try to find out how many countries participated in the 1986 World Cup.
 
-Hint 1: as a first step, create a new dataset that only contains games in that year.
+Now, let's try to find out **how many countries participated in the 1986 World Cup**.
 
-Hint 2: You can use `.unique()` to make sure you don't end up with duplicate country names.
+Hint 1: As a first step, create a new dataset that only contains games in that year.
+
+Hint 2: Make sure you don't end up with duplicate country names. Consider using `set()` or `.unique()`.
 
 
 ```python
-# Number of countries participated in the 1986 world cup
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
 # Number of countries participated in the 1986 world cup
-games_86 = df[df['Year'] == 1986]
-home = list(games_86['Home Team Name'].unique())
-away = list(games_86['Away Team Name'].unique())
-print(len(home))
-home += away
-print(len(home))
-print(len(set(home)))
+
+# Copy of dataset that is limited to 1986, and only team name cols
+games_86 = df.loc[df['Year'] == 1986, ['Home Team Name', 'Away Team Name']].copy()
+print("Total games in 1986:", len(games_86))
+print()
+
+# Converting to Python set approach (some base Python)
+# Create sets of unique home and away teams
+home = set(games_86['Home Team Name'])
+away = set(games_86['Away Team Name'])
+# Get the length of the union of those sets
+print("Unique countries participating:", len(home | away))
+
+# Melt approach (all pandas)
+# Use `melt` to stack home and away variables on top of each other
+# This creates one column "Home or Away" with values of either "Home
+# Team Name" or "Away Team Name", one column "Team" with the team name
+teams_86 = games_86.melt(var_name = "Home or Away", value_name="Team")
+# Find unique number of teams using "Team" column
+print("Unique countries participating:", len(teams_86["Team"].unique()))
 ```
 
-    24
-    48
-    24
+    Total games in 1986: 52
+    
+    Unique countries participating: 24
+    Unique countries participating: 24
 
 
-In World Cup history, how many matches had 5 goals or more in total?
+## Changing Values and Creating New Columns
+
+In World Cup history, **how many matches had 5 goals or more in total**? Create a column `"Total Goals"` to answer this question.
 
 
 ```python
-# Number of matches that had 5 or more goals in total
-
+# Your code here
 ```
 
 
 ```python
 # __SOLUTION__ 
 # Number of matches that had more than 5 goals in total
-df['Total_Goals'] = df['Home Team Goals'] + df['Away Team Goals']
-print(len(df[df['Total_Goals'] >= 5]))
+
+# New column created by summing the other two
+# We don't need a loop because pandas will automatically create
+# one and "broadcast" each value from the columns being summed
+df['Total Goals'] = df['Home Team Goals'] + df['Away Team Goals']
+# Length of df where the new column >= 5
+len(df[df['Total Goals'] >= 5])
 ```
+
+
+
 
     147
 
 
-## Changing values and creating new columns
 
-With the information you currently have in your `df`, create a new column, "Half-time Goals."
+Now **create a new column `"Half-time Goals"`** in `df` that includes both home and away values.
 
 
 ```python
-# Create a new column 'Half-time Goals' in df
+# Your code here
+```
 
+
+```python
+# Run this cell without changes to see your new column
+df.columns
 ```
 
 
@@ -985,13 +1039,29 @@ With the information you currently have in your `df`, create a new column, "Half
 # __SOLUTION__ 
 # Create a new column 'Half-time Goals' in df
 df['Half-time Goals'] = df['Half-time Home Goals'] + df['Half-time Away Goals']
+df.columns
 ```
+
+
+
+
+    Index(['Year', 'Datetime', 'Stage', 'Stadium', 'City', 'Home Team Name',
+           'Home Team Goals', 'Away Team Goals', 'Away Team Name',
+           'Win conditions', 'Attendance', 'Half-time Home Goals',
+           'Half-time Away Goals', 'Referee', 'Assistant 1', 'Assistant 2',
+           'RoundID', 'MatchID', 'Home Team Initials', 'Away Team Initials',
+           'Total Goals', 'Half-time Goals'],
+          dtype='object')
+
+
 
 Run the code below. You'll notice that for Korea, there are records for both North-Korea (Korea DPR) and South-Korea (Korea Republic). 
 
 
 ```python
-# Print all records containing the string 'Korea'
+# Run this cell without changes
+
+# Diaplay all records containing the string 'Korea'
 df.loc[df['Home Team Name'].str.contains('Korea'), 'Home Team Name']
 ```
 
@@ -1038,14 +1108,18 @@ Imagine that, for some reason, we simply want Korea listed as one entry, so we w
 ```python
 # __SOLUTION__ 
 # Update the 'Home Team Name' and 'Home Team Initials' columns 
-df.loc[df['Home Team Name'] == 'Korea DPR', 'Home Team Name'] = 'Korea'
-df.loc[df['Home Team Name'] == 'Korea Republic', 'Home Team Name'] = 'Korea'
-df.loc[df['Away Team Name'] == 'Korea DPR', 'Away Team Name'] = 'Korea'
-df.loc[df['Away Team Name'] == 'Korea Republic', 'Away Team Name'] = 'Korea'
-df.loc[df['Home Team Initials'] == 'KOR', 'Home Team Initials'] = 'NSK'
-df.loc[df['Home Team Initials'] == 'KOR', 'Home Team Initials'] = 'NSK'
-df.loc[df['Away Team Initials'] == 'PRK', 'Away Team Initials'] = 'NSK'
-df.loc[df['Away Team Initials'] == 'PRK', 'Away Team Initials'] = 'NSK'
+
+korea_names = ['Korea DPR', 'Korea Republic']
+korea_initials = ['KOR', 'PRK']
+
+# Home team name
+df.loc[df['Home Team Name'].isin(korea_names), 'Home Team Name'] = 'Korea'
+# Away team name
+df.loc[df['Away Team Name'].isin(korea_names), 'Away Team Name'] = 'Korea'
+# Home team initials
+df.loc[df['Home Team Initials'].isin(korea_initials), 'Home Team Initials'] = 'NSK'
+# Away team initials
+df.loc[df['Away Team Initials'].isin(korea_initials), 'Away Team Initials'] = 'NSK'
 ```
 
 Make sure to verify your answer!
@@ -1060,7 +1134,13 @@ Make sure to verify your answer!
 ```python
 # __SOLUTION__ 
 # Check the updated columns
-df.loc[df['Home Team Name'].str.contains('Korea')]
+
+korea_mask = (
+    (df['Home Team Name'].str.contains('Korea')) |
+    (df['Away Team Name'].str.contains('Korea'))
+)
+
+df.loc[korea_mask, ['Home Team Name', 'Away Team Name', 'Home Team Initials', 'Away Team Initials']]
 ```
 
 
@@ -1084,1008 +1164,285 @@ df.loc[df['Home Team Name'].str.contains('Korea')]
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Year</th>
-      <th>Datetime</th>
-      <th>Stage</th>
-      <th>Stadium</th>
-      <th>City</th>
       <th>Home Team Name</th>
-      <th>Home Team Goals</th>
-      <th>Away Team Goals</th>
       <th>Away Team Name</th>
-      <th>Win conditions</th>
-      <th>...</th>
-      <th>Half-time Away Goals</th>
-      <th>Referee</th>
-      <th>Assistant 1</th>
-      <th>Assistant 2</th>
-      <th>RoundID</th>
-      <th>MatchID</th>
       <th>Home Team Initials</th>
       <th>Away Team Initials</th>
-      <th>Total_Goals</th>
-      <th>Half-time Goals</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>179</th>
-      <td>1966</td>
-      <td>15 Jul 1966 - 19:30</td>
-      <td>Group 4</td>
-      <td>Ayresome Park</td>
-      <td>Middlesbrough</td>
-      <td>Korea</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Chile</td>
-      <td></td>
-      <td>...</td>
-      <td>1</td>
-      <td>KANDIL Aly Hussein (EGY)</td>
-      <td>CRAWFORD William (SCO)</td>
-      <td>FINNEY Jim (ENG)</td>
-      <td>238</td>
-      <td>1609</td>
-      <td>PRK</td>
-      <td>CHI</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>187</th>
-      <td>1966</td>
-      <td>19 Jul 1966 - 19:30</td>
-      <td>Group 4</td>
-      <td>Ayresome Park</td>
-      <td>Middlesbrough</td>
-      <td>Korea</td>
-      <td>1</td>
-      <td>0</td>
-      <td>Italy</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>SCHWINTE Pierre (FRA)</td>
-      <td>ADAIR John (NIR)</td>
-      <td>TAYLOR John (ENG)</td>
-      <td>238</td>
-      <td>1679</td>
-      <td>PRK</td>
-      <td>ITA</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>374</th>
-      <td>1986</td>
-      <td>05 Jun 1986 - 16:00</td>
-      <td>Group A</td>
-      <td>Estadio Ol�mpico Universitario</td>
-      <td>Mexico City</td>
-      <td>Korea</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Bulgaria</td>
-      <td></td>
-      <td>...</td>
-      <td>1</td>
-      <td>AL SHANAR Fallaj Khuzam (KSA)</td>
-      <td>IGNA Ioan (ROU)</td>
-      <td>BUTENKO Valeri (RUS)</td>
-      <td>308</td>
-      <td>460</td>
-      <td>NSK</td>
-      <td>BUL</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>386</th>
-      <td>1986</td>
-      <td>10 Jun 1986 - 12:00</td>
-      <td>Group A</td>
-      <td>Cuauhtemoc</td>
-      <td>Puebla</td>
-      <td>Korea</td>
-      <td>2</td>
-      <td>3</td>
-      <td>Italy</td>
-      <td></td>
-      <td>...</td>
-      <td>1</td>
-      <td>SOCHA David (USA)</td>
-      <td>URREA Joaquin (MEX)</td>
-      <td>AL SHARIF Jamal (SYR)</td>
-      <td>308</td>
-      <td>643</td>
-      <td>NSK</td>
-      <td>ITA</td>
-      <td>5</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>434</th>
-      <td>1990</td>
-      <td>17 Jun 1990 - 21:00</td>
-      <td>Group E</td>
-      <td>Dacia Arena</td>
-      <td>Udine</td>
-      <td>Korea</td>
-      <td>1</td>
-      <td>3</td>
-      <td>Spain</td>
-      <td></td>
-      <td>...</td>
-      <td>1</td>
-      <td>JACOME GUERRERO Elias V. (ECU)</td>
-      <td>MAGNI Pierluigi (ITA)</td>
-      <td>LOUSTAU Juan (ARG)</td>
-      <td>322</td>
-      <td>175</td>
-      <td>NSK</td>
-      <td>ESP</td>
-      <td>4</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>444</th>
-      <td>1990</td>
-      <td>21 Jun 1990 - 17:00</td>
-      <td>Group E</td>
-      <td>Friuli</td>
-      <td>Udine</td>
-      <td>Korea</td>
-      <td>0</td>
-      <td>1</td>
-      <td>Uruguay</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>LANESE Tullio (ITA)</td>
-      <td>DIRAMBA Jean Fidele (GAB)</td>
-      <td>JOUINI Neji (TUN)</td>
-      <td>322</td>
-      <td>290</td>
-      <td>NSK</td>
-      <td>URU</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>480</th>
-      <td>1994</td>
-      <td>23 Jun 1994 - 19:30</td>
-      <td>Group C</td>
-      <td>Foxboro Stadium</td>
-      <td>Boston</td>
-      <td>Korea</td>
-      <td>0</td>
-      <td>0</td>
-      <td>Bolivia</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>MOTTRAM Leslie (SCO)</td>
-      <td>MATTHYS Luc (BEL)</td>
-      <td>EVERSTIG Mikael (SWE)</td>
-      <td>337</td>
-      <td>3065</td>
-      <td>NSK</td>
-      <td>BOL</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>524</th>
-      <td>1998</td>
-      <td>13 Jun 1998 - 17:30</td>
-      <td>Group E</td>
-      <td>Stade de Gerland</td>
-      <td>Lyon</td>
-      <td>Korea</td>
-      <td>1</td>
-      <td>3</td>
-      <td>Mexico</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>BENKO Gunter (AUT)</td>
-      <td>FRED Lencie (VAN)</td>
-      <td>SCHNEIDER Erich (GER)</td>
-      <td>1014</td>
-      <td>8732</td>
-      <td>NSK</td>
-      <td>MEX</td>
-      <td>4</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>593</th>
-      <td>2002</td>
-      <td>04 Jun 2002 - 20:30</td>
-      <td>Group D</td>
-      <td>Busan Asiad Main Stadium</td>
-      <td>Busan</td>
-      <td>Korea</td>
-      <td>2</td>
-      <td>0</td>
-      <td>Poland</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>RUIZ Oscar (COL)</td>
-      <td>DORIRI Elise (VAN)</td>
-      <td>LINDBERG Leif (SWE)</td>
-      <td>43950100</td>
-      <td>43950014</td>
-      <td>NSK</td>
-      <td>POL</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>609</th>
-      <td>2002</td>
-      <td>10 Jun 2002 - 15:30</td>
-      <td>Group D</td>
-      <td>Daegu World Cup Stadium</td>
-      <td>Daegu</td>
-      <td>Korea</td>
-      <td>1</td>
-      <td>1</td>
-      <td>USA</td>
-      <td></td>
-      <td>...</td>
-      <td>1</td>
-      <td>MEIER Urs (SUI)</td>
-      <td>BEREUTER Egon (AUT)</td>
-      <td>TOMUSANGE Ali (UGA)</td>
-      <td>43950100</td>
-      <td>43950030</td>
-      <td>NSK</td>
-      <td>USA</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>635</th>
-      <td>2002</td>
-      <td>18 Jun 2002 - 20:30</td>
-      <td>Round of 16</td>
-      <td>Daejeon World Cup Stadium</td>
-      <td>Daejeon</td>
-      <td>Korea</td>
-      <td>2</td>
-      <td>1</td>
-      <td>Italy</td>
-      <td>Win on Golden Goal</td>
-      <td>...</td>
-      <td>0</td>
-      <td>MORENO Byron (ECU)</td>
-      <td>RATTALINO Jorge (ARG)</td>
-      <td>SZEKELY Ferenc (HUN)</td>
-      <td>43950200</td>
-      <td>43950056</td>
-      <td>NSK</td>
-      <td>ITA</td>
-      <td>3</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>642</th>
-      <td>2002</td>
-      <td>29 Jun 2002 - 20:00</td>
-      <td>Third place</td>
-      <td>Daegu World Cup Stadium</td>
-      <td>Daegu</td>
-      <td>Korea</td>
-      <td>2</td>
-      <td>3</td>
-      <td>Turkey</td>
-      <td></td>
-      <td>...</td>
-      <td>3</td>
-      <td>MANE Saad (KUW)</td>
-      <td>ALTRAIFI Ali (KSA)</td>
-      <td>VERGARA Hector (CAN)</td>
-      <td>43950500</td>
-      <td>43950063</td>
-      <td>NSK</td>
-      <td>TUR</td>
-      <td>5</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>655</th>
-      <td>2006</td>
-      <td>13 Jun 2006 - 15:00</td>
-      <td>Group G</td>
-      <td>FIFA World Cup Stadium, Frankfurt</td>
-      <td>Frankfurt/Main</td>
-      <td>Korea</td>
-      <td>2</td>
-      <td>1</td>
-      <td>Togo</td>
-      <td></td>
-      <td>...</td>
-      <td>1</td>
-      <td>POLL Graham (ENG)</td>
-      <td>SHARP Philip (ENG)</td>
-      <td>TURNER Glenn (ENG)</td>
-      <td>97410100</td>
-      <td>97410014</td>
-      <td>NSK</td>
-      <td>TOG</td>
-      <td>3</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>710</th>
-      <td>2010</td>
-      <td>12 Jun 2010 - 13:30</td>
-      <td>Group B</td>
-      <td>Port Elizabeth Stadium</td>
-      <td>Nelson Mandela Bay/Port Elizabeth</td>
-      <td>Korea</td>
-      <td>2</td>
-      <td>0</td>
-      <td>Greece</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>HESTER Michael (NZL)</td>
-      <td>HINTZ Jan Hendrik (NZL)</td>
-      <td>MAKASINI Tevita (TGA)</td>
-      <td>249722</td>
-      <td>300061459</td>
-      <td>NSK</td>
-      <td>GRE</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>753</th>
-      <td>2010</td>
-      <td>25 Jun 2010 - 16:00</td>
-      <td>Group G</td>
-      <td>Mbombela Stadium</td>
-      <td>Nelspruit</td>
-      <td>Korea</td>
-      <td>0</td>
-      <td>3</td>
-      <td>C�te d'Ivoire</td>
-      <td></td>
-      <td>...</td>
-      <td>2</td>
-      <td>Alberto UNDIANO MALLENCO (ESP)</td>
-      <td>MARTINEZ Fermin (ESP)</td>
-      <td>YUSTE Juan (ESP)</td>
-      <td>249722</td>
-      <td>300061486</td>
-      <td>PRK</td>
-      <td>CIV</td>
-      <td>3</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>802</th>
-      <td>2014</td>
-      <td>22 Jun 2014 - 16:00</td>
-      <td>Group H</td>
-      <td>Estadio Beira-Rio</td>
-      <td>Porto Alegre</td>
-      <td>Korea</td>
-      <td>2</td>
-      <td>4</td>
-      <td>Algeria</td>
-      <td></td>
-      <td>...</td>
-      <td>3</td>
-      <td>ROLDAN Wilmar (COL)</td>
-      <td>DIAZ Eduardo (COL)</td>
-      <td>LESCANO Christian (ECU)</td>
-      <td>255931</td>
-      <td>300186495</td>
-      <td>NSK</td>
-      <td>ALG</td>
-      <td>6</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>818</th>
-      <td>2014</td>
-      <td>26 Jun 2014 - 17:00</td>
-      <td>Group H</td>
-      <td>Arena de Sao Paulo</td>
-      <td>Sao Paulo</td>
-      <td>Korea</td>
-      <td>0</td>
-      <td>1</td>
-      <td>Belgium</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>Ben WILLIAMS (AUS)</td>
-      <td>CREAM Matthew (AUS)</td>
-      <td>ANAZ Hakan (AUS)</td>
-      <td>255931</td>
-      <td>300186480</td>
-      <td>NSK</td>
-      <td>BEL</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>17 rows × 22 columns</p>
-</div>
-
-
-
-
-```python
-# __SOLUTION__ 
-# Check the updated columns
-df.loc[df['Away Team Name'].str.contains('Korea')]
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Datetime</th>
-      <th>Stage</th>
-      <th>Stadium</th>
-      <th>City</th>
-      <th>Home Team Name</th>
-      <th>Home Team Goals</th>
-      <th>Away Team Goals</th>
-      <th>Away Team Name</th>
-      <th>Win conditions</th>
-      <th>...</th>
-      <th>Half-time Away Goals</th>
-      <th>Referee</th>
-      <th>Assistant 1</th>
-      <th>Assistant 2</th>
-      <th>RoundID</th>
-      <th>MatchID</th>
-      <th>Home Team Initials</th>
-      <th>Away Team Initials</th>
-      <th>Total_Goals</th>
-      <th>Half-time Goals</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>80</th>
-      <td>1954</td>
-      <td>17 Jun 1954 - 18:00</td>
-      <td>Group 2</td>
-      <td>Hardturm</td>
-      <td>Zurich</td>
       <td>Hungary</td>
-      <td>9</td>
-      <td>0</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>VINCENTI Raymond (FRA)</td>
-      <td>VON GUNTER Albert (SUI)</td>
-      <td>STEINER Carl (AUT)</td>
-      <td>211</td>
-      <td>1294</td>
       <td>HUN</td>
-      <td>KOR</td>
-      <td>9</td>
-      <td>4</td>
+      <td>NSK</td>
     </tr>
     <tr>
       <th>88</th>
-      <td>1954</td>
-      <td>20 Jun 1954 - 17:00</td>
-      <td>Group 2</td>
-      <td>Charmilles</td>
-      <td>Geneva</td>
       <td>Turkey</td>
-      <td>7</td>
-      <td>0</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>MARINO Esteban (URU)</td>
-      <td>ORLANDINI Vincenzo (ITA)</td>
-      <td>SCHONHOLZER Ernest (SUI)</td>
-      <td>211</td>
-      <td>1304</td>
       <td>TUR</td>
-      <td>KOR</td>
-      <td>7</td>
-      <td>4</td>
+      <td>NSK</td>
     </tr>
     <tr>
       <th>171</th>
-      <td>1966</td>
-      <td>12 Jul 1966 - 19:30</td>
-      <td>Group 4</td>
-      <td>Ayresome Park</td>
-      <td>Middlesbrough</td>
       <td>Soviet Union</td>
-      <td>3</td>
-      <td>0</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>GARDEAZABAL Juan (ESP)</td>
-      <td>KANDIL Aly Hussein (EGY)</td>
-      <td>DIENST Gottfried (SUI)</td>
-      <td>238</td>
-      <td>1710</td>
       <td>URS</td>
       <td>NSK</td>
-      <td>3</td>
-      <td>2</td>
+    </tr>
+    <tr>
+      <th>179</th>
+      <td>Korea</td>
+      <td>Chile</td>
+      <td>NSK</td>
+      <td>CHI</td>
+    </tr>
+    <tr>
+      <th>187</th>
+      <td>Korea</td>
+      <td>Italy</td>
+      <td>NSK</td>
+      <td>ITA</td>
     </tr>
     <tr>
       <th>195</th>
-      <td>1966</td>
-      <td>23 Jul 1966 - 15:00</td>
-      <td>Quarter-finals</td>
-      <td>Goodison Park</td>
-      <td>Liverpool</td>
       <td>Portugal</td>
-      <td>5</td>
-      <td>3</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>3</td>
-      <td>ASHKENAZI Menachem (ISR)</td>
-      <td>GALBA Karol (TCH)</td>
-      <td>SCHWINTE Pierre (FRA)</td>
-      <td>239</td>
-      <td>1702</td>
       <td>POR</td>
       <td>NSK</td>
-      <td>8</td>
-      <td>5</td>
     </tr>
     <tr>
       <th>364</th>
-      <td>1986</td>
-      <td>02 Jun 1986 - 12:00</td>
-      <td>Group A</td>
-      <td>Estadio Ol�mpico Universitario</td>
-      <td>Mexico City</td>
       <td>Argentina</td>
-      <td>3</td>
-      <td>1</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>SANCHEZ ARMINIO Victoriano (ESP)</td>
-      <td>GONZALEZ ROA Gabriel (PAR)</td>
-      <td>DIAZ PALACIO Jesus (COL)</td>
-      <td>308</td>
-      <td>395</td>
       <td>ARG</td>
-      <td>KOR</td>
-      <td>4</td>
-      <td>2</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>374</th>
+      <td>Korea</td>
+      <td>Bulgaria</td>
+      <td>NSK</td>
+      <td>BUL</td>
+    </tr>
+    <tr>
+      <th>386</th>
+      <td>Korea</td>
+      <td>Italy</td>
+      <td>NSK</td>
+      <td>ITA</td>
     </tr>
     <tr>
       <th>421</th>
-      <td>1990</td>
-      <td>12 Jun 1990 - 17:00</td>
-      <td>Group E</td>
-      <td>Marc Antonio Bentegodi</td>
-      <td>Verona</td>
       <td>Belgium</td>
-      <td>2</td>
-      <td>0</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>MAURO Vincent (USA)</td>
-      <td>SNODDY Alan (NIR)</td>
-      <td>COURTNEY George (ENG)</td>
-      <td>322</td>
-      <td>57</td>
       <td>BEL</td>
-      <td>KOR</td>
-      <td>2</td>
-      <td>0</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>434</th>
+      <td>Korea</td>
+      <td>Spain</td>
+      <td>NSK</td>
+      <td>ESP</td>
+    </tr>
+    <tr>
+      <th>444</th>
+      <td>Korea</td>
+      <td>Uruguay</td>
+      <td>NSK</td>
+      <td>URU</td>
     </tr>
     <tr>
       <th>464</th>
-      <td>1994</td>
-      <td>17 Jun 1994 - 19:30</td>
-      <td>Group C</td>
-      <td>Cotton Bowl</td>
-      <td>Dallas</td>
       <td>Spain</td>
-      <td>2</td>
-      <td>2</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>MIKKELSEN Peter (DEN)</td>
-      <td>CHRISTENSEN Carl-Johan Meyer (DEN)</td>
-      <td>PEARSON Roy (ENG)</td>
-      <td>337</td>
-      <td>3050</td>
       <td>ESP</td>
-      <td>KOR</td>
-      <td>4</td>
-      <td>0</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>480</th>
+      <td>Korea</td>
+      <td>Bolivia</td>
+      <td>NSK</td>
+      <td>BOL</td>
     </tr>
     <tr>
       <th>490</th>
-      <td>1994</td>
-      <td>27 Jun 1994 - 16:00</td>
-      <td>Group C</td>
-      <td>Cotton Bowl</td>
-      <td>Dallas</td>
       <td>Germany</td>
-      <td>3</td>
-      <td>2</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>QUINIOU Joel (FRA)</td>
-      <td>IVANOV Valentin (RUS)</td>
-      <td>HASSAN Abdel-Magid (EGY)</td>
-      <td>337</td>
-      <td>3076</td>
       <td>GER</td>
-      <td>KOR</td>
-      <td>5</td>
-      <td>3</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>524</th>
+      <td>Korea</td>
+      <td>Mexico</td>
+      <td>NSK</td>
+      <td>MEX</td>
     </tr>
     <tr>
       <th>542</th>
-      <td>1998</td>
-      <td>20 Jun 1998 - 21:00</td>
-      <td>Group E</td>
-      <td>Stade V�lodrome</td>
-      <td>Marseilles</td>
       <td>Netherlands</td>
-      <td>5</td>
-      <td>0</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>WOJCIK Ryszard (POL)</td>
-      <td>POCIEGIEL Jacek (POL)</td>
-      <td>DUPANOV Yuri (BLR)</td>
-      <td>1014</td>
-      <td>8749</td>
       <td>NED</td>
-      <td>KOR</td>
-      <td>5</td>
-      <td>2</td>
+      <td>NSK</td>
     </tr>
     <tr>
       <th>556</th>
-      <td>1998</td>
-      <td>25 Jun 1998 - 16:00</td>
-      <td>Group E</td>
-      <td>Parc des Princes</td>
-      <td>Paris</td>
       <td>Belgium</td>
-      <td>1</td>
-      <td>1</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>REZENDE Marcio (BRA)</td>
-      <td>PINTO Arnaldo (BRA)</td>
-      <td>ARANGO Jorge Luis (COL)</td>
-      <td>1014</td>
-      <td>8765</td>
       <td>BEL</td>
-      <td>KOR</td>
-      <td>2</td>
-      <td>1</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>593</th>
+      <td>Korea</td>
+      <td>Poland</td>
+      <td>NSK</td>
+      <td>POL</td>
+    </tr>
+    <tr>
+      <th>609</th>
+      <td>Korea</td>
+      <td>USA</td>
+      <td>NSK</td>
+      <td>USA</td>
     </tr>
     <tr>
       <th>625</th>
-      <td>2002</td>
-      <td>14 Jun 2002 - 20:30</td>
-      <td>Group D</td>
-      <td>Incheon Football Stadium</td>
-      <td>Incheon</td>
       <td>Portugal</td>
-      <td>0</td>
-      <td>1</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>SANCHEZ Angel (ARG)</td>
-      <td>ALTRAIFI Ali (KSA)</td>
-      <td>SZEKELY Ferenc (HUN)</td>
-      <td>43950100</td>
-      <td>43950047</td>
       <td>POR</td>
-      <td>KOR</td>
-      <td>1</td>
-      <td>0</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>635</th>
+      <td>Korea</td>
+      <td>Italy</td>
+      <td>NSK</td>
+      <td>ITA</td>
     </tr>
     <tr>
       <th>639</th>
-      <td>2002</td>
-      <td>22 Jun 2002 - 15:30</td>
-      <td>Quarter-finals</td>
-      <td>Gwangju World Cup Stadium</td>
-      <td>Gwangju</td>
       <td>Spain</td>
-      <td>0</td>
-      <td>0</td>
       <td>Korea</td>
-      <td>Korea Republic win on penalties (3 - 5)</td>
-      <td>...</td>
-      <td>0</td>
-      <td>EL GHANDOUR Gamal (EGY)</td>
-      <td>TOMUSANGE Ali (UGA)</td>
-      <td>RAGOONATH Michael (TRI)</td>
-      <td>43950300</td>
-      <td>43950059</td>
       <td>ESP</td>
-      <td>KOR</td>
-      <td>0</td>
-      <td>0</td>
+      <td>NSK</td>
     </tr>
     <tr>
       <th>640</th>
-      <td>2002</td>
-      <td>25 Jun 2002 - 20:30</td>
-      <td>Semi-finals</td>
-      <td>Seoul World Cup Stadium</td>
-      <td>Seoul</td>
       <td>Germany</td>
-      <td>1</td>
-      <td>0</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>MEIER Urs (SUI)</td>
-      <td>ARNAULT Frederic (FRA)</td>
-      <td>AMLER Evzen (CZE)</td>
-      <td>43950400</td>
-      <td>43950061</td>
       <td>GER</td>
-      <td>KOR</td>
-      <td>1</td>
-      <td>0</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>642</th>
+      <td>Korea</td>
+      <td>Turkey</td>
+      <td>NSK</td>
+      <td>TUR</td>
+    </tr>
+    <tr>
+      <th>655</th>
+      <td>Korea</td>
+      <td>Togo</td>
+      <td>NSK</td>
+      <td>TOG</td>
     </tr>
     <tr>
       <th>672</th>
-      <td>2006</td>
-      <td>18 Jun 2006 - 21:00</td>
-      <td>Group G</td>
-      <td>Zentralstadion</td>
-      <td>Leipzig</td>
       <td>France</td>
-      <td>1</td>
-      <td>1</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>ARCHUNDIA Benito (MEX)</td>
-      <td>RAMIREZ Jose (MEX)</td>
-      <td>VERGARA Hector (CAN)</td>
-      <td>97410100</td>
-      <td>97410029</td>
       <td>FRA</td>
-      <td>KOR</td>
-      <td>2</td>
-      <td>1</td>
+      <td>NSK</td>
     </tr>
     <tr>
       <th>691</th>
-      <td>2006</td>
-      <td>23 Jun 2006 - 21:00</td>
-      <td>Group G</td>
-      <td>FIFA World Cup Stadium, Hanover</td>
-      <td>Hanover</td>
       <td>Switzerland</td>
-      <td>2</td>
-      <td>0</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>ELIZONDO Horacio (ARG)</td>
-      <td>GARCIA Dario (ARG)</td>
-      <td>OTERO Rodolfo (ARG)</td>
-      <td>97410100</td>
-      <td>97410046</td>
       <td>SUI</td>
-      <td>KOR</td>
-      <td>2</td>
-      <td>1</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>710</th>
+      <td>Korea</td>
+      <td>Greece</td>
+      <td>NSK</td>
+      <td>GRE</td>
     </tr>
     <tr>
       <th>721</th>
-      <td>2010</td>
-      <td>15 Jun 2010 - 20:30</td>
-      <td>Group G</td>
-      <td>Ellis Park Stadium</td>
-      <td>Johannesburg</td>
       <td>Brazil</td>
-      <td>2</td>
-      <td>1</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>KASSAI Viktor (HUN)</td>
-      <td>EROS Gabor (HUN)</td>
-      <td>VAMOS Tibor (HUN)</td>
-      <td>249722</td>
-      <td>300061490</td>
       <td>BRA</td>
       <td>NSK</td>
-      <td>3</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>725</th>
-      <td>2010</td>
-      <td>17 Jun 2010 - 13:30</td>
-      <td>Group B</td>
-      <td>Soccer City Stadium</td>
-      <td>Johannesburg</td>
       <td>Argentina</td>
-      <td>4</td>
-      <td>1</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>1</td>
-      <td>DE BLEECKERE Frank (BEL)</td>
-      <td>HERMANS Peter (BEL)</td>
-      <td>VROMANS Walter (BEL)</td>
-      <td>249722</td>
-      <td>300061458</td>
       <td>ARG</td>
-      <td>KOR</td>
-      <td>5</td>
-      <td>3</td>
+      <td>NSK</td>
     </tr>
     <tr>
       <th>737</th>
-      <td>2010</td>
-      <td>21 Jun 2010 - 13:30</td>
-      <td>Group G</td>
-      <td>Cape Town Stadium</td>
-      <td>Cape Town</td>
       <td>Portugal</td>
-      <td>7</td>
-      <td>0</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>POZO Pablo (CHI)</td>
-      <td>BASUALTO Patricio (CHI)</td>
-      <td>MONDRIA Francisco (CHI)</td>
-      <td>249722</td>
-      <td>300061487</td>
       <td>POR</td>
       <td>NSK</td>
-      <td>7</td>
-      <td>1</td>
     </tr>
     <tr>
       <th>742</th>
-      <td>2010</td>
-      <td>22 Jun 2010 - 20:30</td>
-      <td>Group B</td>
-      <td>Durban Stadium</td>
-      <td>Durban</td>
       <td>Nigeria</td>
-      <td>2</td>
-      <td>2</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>1</td>
-      <td>Oleg�rio BENQUEREN�A (POR)</td>
-      <td>CARDINAL Jose (POR)</td>
-      <td>MIRANDA Bertino (POR)</td>
-      <td>249722</td>
-      <td>300111115</td>
       <td>NGA</td>
-      <td>KOR</td>
-      <td>4</td>
-      <td>2</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>753</th>
+      <td>Korea</td>
+      <td>C�te d'Ivoire</td>
+      <td>NSK</td>
+      <td>CIV</td>
     </tr>
     <tr>
       <th>756</th>
-      <td>2010</td>
-      <td>26 Jun 2010 - 16:00</td>
-      <td>Round of 16</td>
-      <td>Port Elizabeth Stadium</td>
-      <td>Nelson Mandela Bay/Port Elizabeth</td>
       <td>Uruguay</td>
-      <td>2</td>
-      <td>1</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>Wolfgang STARK (GER)</td>
-      <td>SALVER Jan-Hendrik (GER)</td>
-      <td>PICKEL Mike (GER)</td>
-      <td>249717</td>
-      <td>300061504</td>
       <td>URU</td>
-      <td>KOR</td>
-      <td>3</td>
-      <td>1</td>
+      <td>NSK</td>
     </tr>
     <tr>
       <th>788</th>
-      <td>2014</td>
-      <td>17 Jun 2014 - 18:00</td>
-      <td>Group H</td>
-      <td>Arena Pantanal</td>
-      <td>Cuiaba</td>
       <td>Russia</td>
-      <td>1</td>
-      <td>1</td>
       <td>Korea</td>
-      <td></td>
-      <td>...</td>
-      <td>0</td>
-      <td>PITANA Nestor (ARG)</td>
-      <td>MAIDANA Hernan (ARG)</td>
-      <td>BELATTI Juan Pablo (ARG)</td>
-      <td>255931</td>
-      <td>300186499</td>
       <td>RUS</td>
-      <td>KOR</td>
-      <td>2</td>
-      <td>0</td>
+      <td>NSK</td>
+    </tr>
+    <tr>
+      <th>802</th>
+      <td>Korea</td>
+      <td>Algeria</td>
+      <td>NSK</td>
+      <td>ALG</td>
+    </tr>
+    <tr>
+      <th>818</th>
+      <td>Korea</td>
+      <td>Belgium</td>
+      <td>NSK</td>
+      <td>BEL</td>
     </tr>
   </tbody>
 </table>
-<p>21 rows × 22 columns</p>
 </div>
 
 
 
 ## Summary
 
-In this lab, you learned how to access data within Pandas!
+In this lab, you practiced accessing data within Pandas!

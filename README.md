@@ -5,7 +5,9 @@
 In this lab, we'll look at a dataset which contains information on World Cup matches. Let's use the pandas commands learned in the previous lesson to learn more about our data!
 
 ## Objectives
+
 You will be able to: 
+
 - Use pandas methods and attributes to access information about a dataset 
 - Index pandas dataframes with .loc, .iloc, and column names 
 - Use a boolean mask to index pandas series and dataframes

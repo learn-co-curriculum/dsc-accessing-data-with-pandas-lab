@@ -1063,7 +1063,7 @@ Run the code below. You'll notice that for Korea, there are records for both Nor
 ```python
 # Run this cell without changes
 
-# Diaplay all records containing the string 'Korea'
+# Display all records containing the string 'Korea'
 df.loc[df['Home Team Name'].str.contains('Korea'), 'Home Team Name']
 ```
 
